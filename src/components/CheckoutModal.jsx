@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 // Once you create a Stripe Payment Link, paste it here
 // Stripe Dashboard → Payment Links → + New → Add "The Digital Clean-Up" $30 → Copy link
-const PAYMENT_LINK = 'https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK'
+const PAYMENT_LINK = 'https://buy.stripe.com/cNibJ363x1Zm243aefb7y02'
 
 export default function CheckoutModal({ isOpen, onClose }) {
   if (!isOpen) return null
