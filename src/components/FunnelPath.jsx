@@ -12,9 +12,9 @@ const STEPS = [
   {
     num: '02',
     title: 'Digital Guardian App',
-    price: 'Waitlist',
+    price: '$13.99 / month',
     body: 'Two tasks per week. Ongoing governance. Your score improves every week. You stop managing digital entropy alone.',
-    cta: 'Join waitlist'
+    cta: 'Start free trial'
   },
   {
     num: '03',
@@ -89,7 +89,13 @@ export default function FunnelPath({ onGetCourse }) {
             {s.cta && (
               <button
                 className="btn-ghost"
-                onClick={s.num === '01' ? onGetCourse : () => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={
+                  s.num === '01'
+                    ? onGetCourse
+                    : s.num === '02'
+                    ? () => window.open('https://buy.stripe.com/6oU3cx0JdeM8aAz0DFb7y03', '_blank')
+                    : undefined
+                }
                 style={{ fontSize: '13px', padding: '10px 20px', marginTop: '8px' }}>
                 {s.cta} →
               </button>
