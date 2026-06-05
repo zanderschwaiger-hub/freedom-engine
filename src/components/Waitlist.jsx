@@ -1,62 +1,10 @@
-import React, { useState } from 'react'
-import { supabase } from '../lib/supabase'
+import React from 'react'
 import { useScrollFade } from '../lib/useScrollFade'
+
+const DG_PAYMENT_LINK = 'https://buy.stripe.com/6oU3cx0JdeM8aAz0DFb7y03'
 
 export default function Waitlist() {
   const ref = useScrollFade()
-  const [form, setForm] = useState({ name: '', email: '', concern: '' })
-  const [status, setStatus] = useState('idle') // idle | loading | success | error
-  const [errorMsg, setErrorMsg] = useState('')
-
-  const inputStyle = {
-    width: '100%',
-    background: 'rgba(255,255,255,0.04)',
-    border: '1px solid rgba(255,255,255,0.1)',
-    borderRadius: '2px',
-    padding: '14px 18px',
-    color: 'var(--white)',
-    fontFamily: "'Outfit', sans-serif",
-    fontSize: '15px',
-    outline: 'none',
-    transition: 'border-color 0.2s',
-    marginBottom: '12px'
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    if (!form.name || !form.email) return
-
-    setStatus('loading')
-    setErrorMsg('')
-
-    try {
-      const { error } = await supabase
-        .from('waitlist')
-        .insert([{
-          name: form.name.trim(),
-          email: form.email.trim().toLowerCase(),
-          concern: form.concern.trim() || null,
-          source: 'freedom_engine_homepage',
-          created_at: new Date().toISOString()
-        }])
-
-      if (error) {
-        // If table doesn't exist yet, still show success — we'll catch the lead
-        if (error.code === '42P01') {
-          setStatus('success')
-          return
-        }
-        throw error
-      }
-
-      setStatus('success')
-      setForm({ name: '', email: '', concern: '' })
-    } catch (err) {
-      console.error('Waitlist error:', err)
-      setStatus('error')
-      setErrorMsg('Something went wrong. Please try again.')
-    }
-  }
 
   return (
     <section ref={ref} id="waitlist" style={{
@@ -74,104 +22,77 @@ export default function Waitlist() {
           fontWeight: 600, lineHeight: 1.05,
           marginBottom: '16px'
         }}>
-          Get early access.
+          Now available.
         </h2>
         <p className="fade-up" style={{
           fontSize: '16px', fontWeight: 300,
           color: 'var(--dim)', lineHeight: 1.7,
+          marginBottom: '16px'
+        }}>
+          The ongoing governance engine for your digital life. Two tasks per week.
+          One score. No overwhelm.
+        </p>
+        <p className="fade-up" style={{
+          fontFamily: "'DM Mono', monospace",
+          fontSize: '13px', letterSpacing: '1px',
+          color: 'var(--accent)',
           marginBottom: '44px'
         }}>
-          Digital Guardian is being built for people who are done
-          managing digital entropy alone. Join the list.
+          7 days free — then $13.99 CAD / month. Cancel anytime.
         </p>
 
-        {status === 'success' ? (
-          <div className="fade-up" style={{
-            padding: '40px 32px',
-            background: 'rgba(39,174,110,0.08)',
-            border: '1px solid rgba(39,174,110,0.25)',
-            borderRadius: '2px'
+        <div className="fade-up" style={{
+          display: 'flex', flexDirection: 'column',
+          alignItems: 'center', gap: '16px'
+        }}>
+          <button
+            className="btn-primary"
+            onClick={() => window.open(DG_PAYMENT_LINK, '_blank')}
+            style={{ fontSize: '16px', padding: '18px 40px', width: '100%', maxWidth: '360px' }}
+          >
+            Start your free trial
+          </button>
+
+          <p style={{
+            fontFamily: "'DM Mono', monospace",
+            fontSize: '10px', letterSpacing: '2px',
+            color: 'rgba(200,169,110,0.35)', textTransform: 'uppercase'
           }}>
-            <div style={{
-              fontSize: '32px', marginBottom: '16px'
-            }}>✓</div>
-            <div style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: '24px', fontWeight: 600,
-              color: 'var(--white)', marginBottom: '12px'
-            }}>You're on the list.</div>
-            <p style={{
-              fontSize: '15px', fontWeight: 300,
-              color: 'var(--dim)', lineHeight: 1.7
-            }}>
-              Digital Guardian is being built for people exactly like you.
-              We'll be in touch.
-            </p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="fade-up">
-            <input
-              type="text"
-              placeholder="First Name"
-              required
-              value={form.name}
-              onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-              style={inputStyle}
-              onFocus={e => e.target.style.borderColor = 'rgba(200,169,110,0.4)'}
-              onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              required
-              value={form.email}
-              onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-              style={inputStyle}
-              onFocus={e => e.target.style.borderColor = 'rgba(200,169,110,0.4)'}
-              onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
-            />
-            <input
-              type="text"
-              placeholder="What is your biggest digital concern right now? (optional)"
-              value={form.concern}
-              onChange={e => setForm(f => ({ ...f, concern: e.target.value }))}
-              style={{ ...inputStyle, marginBottom: '20px' }}
-              onFocus={e => e.target.style.borderColor = 'rgba(200,169,110,0.4)'}
-              onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
-            />
+            Use the same email you'll sign in with.
+          </p>
+        </div>
 
-            {status === 'error' && (
+        <div className="fade-up" style={{
+          marginTop: '52px',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: '20px', textAlign: 'left'
+        }}>
+          {[
+            { title: 'Onboarding audit', body: 'Breach check, exposure score, baseline established from day one.' },
+            { title: 'Weekly task engine', body: 'Two tasks per week from the governance framework. Just the next right move.' },
+            { title: 'Governance score', body: 'A single number that moves as you complete tasks. Visible progress.' },
+            { title: 'Live breach alerts', body: 'Notified the moment a breach hits your email — with exactly what to do.' },
+            { title: 'Containment playbooks', body: 'When something goes wrong, step-by-step response guides are ready.' },
+          ].map(f => (
+            <div key={f.title} style={{
+              padding: '20px',
+              background: 'rgba(255,255,255,0.02)',
+              border: '1px solid rgba(200,169,110,0.1)',
+              borderRadius: '2px'
+            }}>
               <div style={{
-                padding: '12px 16px',
-                background: 'rgba(224,112,96,0.1)',
-                border: '1px solid rgba(224,112,96,0.3)',
-                borderRadius: '2px', marginBottom: '16px',
-                fontSize: '13px', color: 'var(--red)'
-              }}>{errorMsg}</div>
-            )}
-
-            <button
-              type="submit"
-              className="btn-primary"
-              disabled={status === 'loading'}
-              style={{
-                width: '100%', fontSize: '16px',
-                padding: '18px',
-                opacity: status === 'loading' ? 0.7 : 1
-              }}>
-              {status === 'loading' ? 'Joining...' : 'Join the Waitlist'}
-            </button>
-
-            <p style={{
-              marginTop: '16px',
-              fontFamily: "'DM Mono', monospace",
-              fontSize: '10px', letterSpacing: '2px',
-              color: 'rgba(200,169,110,0.35)', textTransform: 'uppercase'
-            }}>
-              No spam. No noise. Just Digital Guardian.
-            </p>
-          </form>
-        )}
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: '17px', fontWeight: 600,
+                color: 'var(--white)', marginBottom: '8px'
+              }}>{f.title}</div>
+              <div style={{
+                fontSize: '13px', fontWeight: 300,
+                color: 'var(--dim)', lineHeight: 1.65
+              }}>{f.body}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
