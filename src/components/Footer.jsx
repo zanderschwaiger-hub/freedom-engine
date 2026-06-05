@@ -42,9 +42,13 @@ export default function Footer({ onGetCourse }) {
               style={{ fontSize: '16px', padding: '18px 44px' }}>
               Get The Digital Clean-Up — $30
             </button>
-            <a href="#waitlist" className="btn-ghost"
+            
+              href="https://buy.stripe.com/6oU3cx0JdeM8aAz0DFb7y03"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-ghost"
               style={{ fontSize: '16px', padding: '18px 44px' }}>
-              Join the Digital Guardian Waitlist
+              Start Digital Guardian Free
             </a>
           </div>
         </div>
@@ -73,9 +77,12 @@ export default function Footer({ onGetCourse }) {
         </div>
         <div style={{
           fontFamily: "'DM Mono', monospace",
-          fontSize: '10px', color: 'rgba(240,238,234,0.2)'
+          fontSize: '10px', color: 'rgba(240,238,234,0.2)',
+          display: 'flex', gap: '16px', alignItems: 'center'
         }}>
-          © {new Date().getFullYear()} Freedom Engine
+          <span>© {new Date().getFullYear()} Freedom Engine</span>
+          <a href="/privacy" style={{ color: 'rgba(240,238,234,0.3)', textDecoration: 'none' }}>Privacy</a>
+          <a href="/terms" style={{ color: 'rgba(240,238,234,0.3)', textDecoration: 'none' }}>Terms</a>
         </div>
       </footer>
     </>
