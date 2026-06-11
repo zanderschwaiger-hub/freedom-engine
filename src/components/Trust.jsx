@@ -13,7 +13,6 @@ export default function Trust() {
       <div style={{ maxWidth: '820px' }}>
         <span className="section-tag fade-up">Why Freedom Engine</span>
 
-        {/* Big quote */}
         <blockquote className="fade-up" style={{
           fontFamily: "'Cormorant Garamond', serif",
           fontSize: 'clamp(24px, 3.5vw, 44px)',
@@ -34,27 +33,27 @@ export default function Trust() {
           color: 'var(--dim)', lineHeight: 1.8
         }}>
           <p style={{ marginBottom: '16px' }}>
-            Freedom Engine reduces your digital fragility through structured governance.
-            The 12-pillar framework operates invisibly underneath a single outcome:
-            you regain control of your digital life.
+            Freedom Engine gives you visibility into your digital life and a clear path
+            to clean it up. Not because you became an expert. Because you finally have
+            the structure — and you know exactly what to do when something goes wrong.
           </p>
           <p>
-            Not because you learned more. Because someone competent
-            built the structure — and now it runs with you.
+            The crash course gives you control in one sitting.
+            The Digital Guardian app keeps you in control week by week.
+            And when something breaks — the playbooks tell you exactly what to do, step by step.
           </p>
         </div>
 
-        {/* Philosophy pillars */}
         <div className="fade-up" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
           gap: '16px', marginTop: '52px'
         }}>
           {[
-            { label: 'Control', desc: 'Who owns your digital life right now.' },
-            { label: 'Coverage', desc: 'What exists and what is connected.' },
-            { label: 'Defense', desc: 'Reduce probability. Reduce blast radius.' },
-            { label: 'Maintenance', desc: 'Governance that never decays.' }
+            { label: 'Visibility', desc: 'Know what exists in your name and what is at risk.' },
+            { label: 'Control', desc: 'Know what you have and who has access to it.' },
+            { label: 'Action', desc: 'Know exactly what to fix and how to fix it.' },
+            { label: 'Recovery', desc: 'Know what to do the moment something goes wrong.' }
           ].map(p => (
             <div key={p.label} style={{
               padding: '20px',
