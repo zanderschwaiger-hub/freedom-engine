@@ -3,24 +3,24 @@ import { useScrollFade } from '../lib/useScrollFade'
 
 const FEATURES = [
   {
-    title: 'Onboarding Audit',
-    body: 'Live breach monitoring, five core exposure areas checked, baseline governance score established from day one. You know exactly where you stand.'
+    title: 'Find your exposure instantly',
+    body: 'Add your emails and phone number. We check what has been breached, what is out there, and what needs attention.'
   },
   {
-    title: 'Weekly Task Engine',
-    body: 'Two tasks per week from the Freedom Engine governance framework. Not overwhelming — just the next right move, delivered every week.'
+    title: 'A weekly action plan that moves',
+    body: '2-3 tasks per week. Each one specific, actionable, and linked directly to where you need to go. No hunting required.'
   },
   {
-    title: 'Governance Score',
-    body: 'A single number that moves as you complete tasks. Visible progress. Replaces the anxiety of not knowing where you stand.'
+    title: 'A health score that means something',
+    body: 'A single number that reflects your actual digital safety posture. It moves when you fix things. It drops when new risks appear.'
   },
   {
-    title: 'Live Breach Alerts',
-    body: 'Push notification the moment a breach hits your email address — with exactly what to do about it, step by step.'
+    title: 'Breach alerts before you find out the hard way',
+    body: 'The moment your email appears in a known breach, you are notified — with exactly what to do about it.'
   },
   {
-    title: 'Containment Playbook',
-    body: 'When something goes wrong, Digital Guardian becomes your calm, structured, step-by-step response guide. Built for bad days.'
+    title: 'When things go wrong — a guide, not a guess',
+    body: 'Compromised email. Hacked account. Identity theft. Step-by-step response guides for the moment something breaks.'
   }
 ]
 
@@ -33,7 +33,6 @@ export default function AppBreakdown() {
       padding: 'clamp(60px, 10vw, 120px) clamp(24px, 8vw, 100px)',
       position: 'relative', overflow: 'hidden'
     }}>
-      {/* Bg glow */}
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         background: 'radial-gradient(ellipse at 80% 50%, rgba(42,74,107,0.3) 0%, transparent 60%)'
@@ -45,11 +44,9 @@ export default function AppBreakdown() {
         gap: '60px', alignItems: 'start',
         position: 'relative', zIndex: 1
       }}>
-        {/* Left */}
         <div>
-          <span className="section-tag fade-up">Coming next</span>
+          <span className="section-tag fade-up">Digital Guardian</span>
 
-          {/* Waitlist badge */}
           <div className="fade-up" style={{
             display: 'inline-flex', alignItems: 'center', gap: '10px',
             background: 'rgba(200,169,110,0.06)',
@@ -66,7 +63,7 @@ export default function AppBreakdown() {
               fontFamily: "'DM Mono', monospace",
               fontSize: '10px', letterSpacing: '2px',
               color: 'var(--accent)', textTransform: 'uppercase'
-            }}>Waitlist Open</span>
+            }}>Now available · $13.99 / month</span>
           </div>
 
           <h2 className="fade-up" style={{
@@ -75,8 +72,8 @@ export default function AppBreakdown() {
             fontWeight: 600, lineHeight: 1.02,
             marginBottom: '20px'
           }}>
-            Digital<br />
-            <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>Guardian.</em>
+            Stay in control.<br />
+            <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>Know what to do.</em>
           </h2>
 
           <p className="fade-up" style={{
@@ -84,24 +81,28 @@ export default function AppBreakdown() {
             color: 'var(--dim)', lineHeight: 1.75,
             marginBottom: '16px', maxWidth: '400px'
           }}>
-            The ongoing governance engine. Two tasks per week.
-            One score. No overwhelm.
+            The ongoing tool for your digital life. Weekly tasks,
+            breach alerts, a health score that moves, and step-by-step
+            guides for when things go wrong.
           </p>
           <p className="fade-up" style={{
             fontSize: '15px', fontWeight: 300,
             color: 'var(--dim)', lineHeight: 1.75,
             marginBottom: '36px', maxWidth: '400px'
           }}>
-            You no longer have to manage digital entropy alone.
+            7 days free. Then $13.99 / month. Cancel anytime.
           </p>
 
-          <a href="#waitlist" className="btn-primary fade-up"
+          
+            href="https://buy.stripe.com/6oU3cx0JdeM8aAz0DFb7y03"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-primary fade-up"
             style={{ fontSize: '15px', padding: '16px 36px' }}>
-            Join the Waitlist
+            Start free trial
           </a>
         </div>
 
-        {/* Right — features */}
         <div className="fade-up">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             {FEATURES.map((f, i) => (
