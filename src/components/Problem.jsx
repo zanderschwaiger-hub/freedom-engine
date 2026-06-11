@@ -21,7 +21,7 @@ export default function Problem() {
           fontWeight: 600, lineHeight: 1.05,
           marginBottom: '16px'
         }}>
-          Drift creates exposure.
+          Most people have no idea<br />what is out there in their name.
         </h2>
         <p className="fade-up" style={{
           fontFamily: "'Cormorant Garamond', serif",
@@ -29,7 +29,7 @@ export default function Problem() {
           fontStyle: 'italic', color: 'var(--accent)',
           marginBottom: '36px'
         }}>
-          Your digital life has been accumulating for years with zero maintenance.
+          And even fewer know what to do when something goes wrong.
         </p>
         <div className="fade-up" style={{
           fontSize: 'clamp(15px, 1.8vw, 17px)', fontWeight: 300,
@@ -37,26 +37,27 @@ export default function Problem() {
         }}>
           <p style={{ marginBottom: '16px' }}>
             Accounts you forgot exist. Passwords reused across a dozen services.
-            Recovery chains nobody has ever tested. Permissions granted to apps
-            you stopped using years ago.
+            Recovery chains that point to old phone numbers. Permissions granted
+            to apps you stopped using years ago.
           </p>
           <p>
-            Data brokers selling your name, address, and phone number right now.
-            This is not a technical failure. It is a governance failure.
+            Data brokers selling your name and address right now.
+            A breach you never heard about. An email account that controls everything
+            and has never been properly secured.
+            This is not a technical problem. It is a visibility problem.
             And it is completely fixable.
           </p>
         </div>
 
-        {/* Three vectors */}
         <div className="fade-up" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
           gap: '20px', marginTop: '56px'
         }}>
           {[
-            { num: '01', title: 'Credential Reuse', body: 'One leaked password tried across every account you own. It works because it\'s the same password.' },
-            { num: '02', title: 'Data Broker Exposure', body: 'Your name, address, relatives, and phone number are being sold right now to anyone who pays.' },
-            { num: '03', title: 'Recovery Chain Hijack', body: 'Someone gets into your email. Everything else falls — because everything recovers through it.' }
+            { num: '01', title: 'You don\'t know what exists', body: 'Hundreds of accounts. Old emails. Forgotten services. Each one is a door you left open.' },
+            { num: '02', title: 'You don\'t know what\'s exposed', body: 'Your credentials have likely appeared in breaches you never heard about. Your data is being sold right now.' },
+            { num: '03', title: 'You don\'t know what to do', body: 'When something goes wrong — a compromised account, a breach, a hacked email — most people freeze. They shouldn\'t have to.' }
           ].map(v => (
             <div key={v.num} style={{
               background: 'rgba(255,255,255,0.025)',
