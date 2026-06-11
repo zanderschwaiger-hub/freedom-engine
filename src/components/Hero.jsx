@@ -17,7 +17,6 @@ export default function Hero({ onGetCourse }) {
       padding: 'clamp(100px, 14vw, 140px) clamp(24px, 8vw, 100px) 80px',
       position: 'relative', overflow: 'hidden'
     }}>
-      {/* Background layers */}
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         background: `
@@ -34,7 +33,6 @@ export default function Hero({ onGetCourse }) {
         backgroundSize: '64px 64px'
       }} />
 
-      {/* Decorative ring */}
       <div style={{
         position: 'absolute', bottom: '80px', right: '80px',
         width: '240px', height: '240px',
@@ -57,8 +55,8 @@ export default function Hero({ onGetCourse }) {
           fontWeight: 600, lineHeight: 1.0,
           marginBottom: '16px', letterSpacing: '-0.5px'
         }}>
-          Your digital life is running<br />
-          <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>without anyone in charge.</em>
+          Know what you have.<br />
+          <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>Know what to do when something goes wrong.</em>
         </h1>
 
         <p className="fade-up" style={{
@@ -67,10 +65,9 @@ export default function Hero({ onGetCourse }) {
           fontWeight: 400, fontStyle: 'italic',
           color: 'var(--dim)', marginBottom: '36px', lineHeight: 1.4
         }}>
-          Freedom Engine governs it for you.
+          Freedom Engine puts you in control of your digital life.
         </p>
 
-        {/* Divider */}
         <div className="fade-up" style={{
           width: '100%', height: '1px', marginBottom: '36px',
           background: 'linear-gradient(90deg, var(--accent) 0%, rgba(200,169,110,0.08) 50%, transparent 100%)'
@@ -81,9 +78,9 @@ export default function Hero({ onGetCourse }) {
           color: 'var(--dim)', maxWidth: '520px',
           lineHeight: 1.75, marginBottom: '48px'
         }}>
-          Most people are not bad at digital security. They are overwhelmed.
-          Too many accounts, too many apps, too many breaches — and no structure
-          to manage any of it. Freedom Engine is the structure.
+          Most people have no idea what accounts exist in their name,
+          what has been breached, or what to do when something goes wrong.
+          Freedom Engine fixes that — with structure, not complexity.
         </p>
 
         <div className="fade-up" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
@@ -97,7 +94,6 @@ export default function Hero({ onGetCourse }) {
           </a>
         </div>
 
-        {/* Trust line */}
         <p className="fade-up" style={{
           marginTop: '40px',
           fontFamily: "'DM Mono', monospace",
