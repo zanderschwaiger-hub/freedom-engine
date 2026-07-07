@@ -55,12 +55,6 @@ export default function Nav({ onGetCourse }) {
         </button>
       </div>
 
-      <style>{`
-        @media(max-width:768px){
-          .nav-desktop { display: none !important; }
-          nav { padding: 0 24px !important; }
-        }
-      `}</style>
     </nav>
   )
 }
