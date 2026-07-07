@@ -93,7 +93,7 @@ export default function AppBreakdown() {
             7 days free. Then $13.99 / month. Cancel anytime.
           </p>
 
-          
+          <a
             href="https://buy.stripe.com/6oU3cx0JdeM8aAz0DFb7y03"
             target="_blank"
             rel="noreferrer"
