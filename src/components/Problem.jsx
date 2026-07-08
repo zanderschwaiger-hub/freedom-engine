@@ -36,14 +36,15 @@ export default function Problem() {
           color: 'var(--dim)', lineHeight: 1.8
         }}>
           <p style={{ marginBottom: '16px' }}>
-            Accounts you forgot exist. Passwords reused across a dozen services.
-            Recovery chains that point to old phone numbers. Permissions granted
-            to apps you stopped using years ago.
+            As a creator or business owner, your exposure is higher than most.
+            Accounts you forgot exist. Passwords reused across platforms.
+            Recovery chains pointing to old numbers. Brand accounts, payment tools,
+            client data — all connected to an email that has never been properly secured.
           </p>
           <p>
             Data brokers selling your name and address right now.
-            A breach you never heard about. An email account that controls everything
-            and has never been properly secured.
+            A breach you never heard about. Everything you have built
+            sitting on a foundation that has never been checked.
             This is not a technical problem. It is a visibility problem.
             And it is completely fixable.
           </p>
