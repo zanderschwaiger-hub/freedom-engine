@@ -49,10 +49,10 @@ export default function Nav({ onGetCourse }) {
         onMouseLeave={e => e.target.style.color = 'var(--dim)'}>
           Digital Guardian
         </a>
-        <a href="https://app.freedomengine.ca" target="_blank" rel="noreferrer" style={
+        <a href="https://app.freedomengine.ca" target="_blank" rel="noreferrer" style={{
           fontSize: '13px', fontWeight: 400, color: 'var(--dim)',
           textDecoration: 'none', letterSpacing: '0.4px', transition: 'color 0.2s'
-        }
+        }}
         onMouseEnter={e => e.target.style.color = 'var(--white)'}
         onMouseLeave={e => e.target.style.color = 'var(--dim)'}>
           Sign In
