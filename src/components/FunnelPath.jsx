@@ -6,7 +6,7 @@ const STEPS = [
     num: '01',
     title: 'The Digital Clean-Up',
     price: '$30',
-    body: 'One day. Five fixes. Walk away with the foundation done and the majority of your exposure permanently closed.',
+    body: 'One day. Five fixes. Walk away knowing exactly what exists in your name, what\'s been cleaned up, and what to do if something ever goes wrong.',
     cta: 'Start today'
   },
   {
@@ -93,7 +93,7 @@ export default function FunnelPath({ onGetCourse }) {
                   s.num === '01'
                     ? onGetCourse
                     : s.num === '02'
-                    ? () => window.open('https://buy.stripe.com/6oU3cx0JdeM8aAz0DFb7y03', '_blank')
+                    ? () => window.open('https://app.freedomengine.ca', '_blank')
                     : undefined
                 }
                 style={{ fontSize: '13px', padding: '10px 20px', marginTop: '8px' }}>
