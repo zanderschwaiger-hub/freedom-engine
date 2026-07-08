@@ -1,7 +1,7 @@
 import React from 'react'
 import { useScrollFade } from '../lib/useScrollFade'
 
-const DG_PAYMENT_LINK = 'https://buy.stripe.com/6oU3cx0JdeM8aAz0DFb7y03'
+const DG_PAYMENT_LINK = 'https://app.freedomengine.ca'
 
 export default function Waitlist() {
   const ref = useScrollFade()
