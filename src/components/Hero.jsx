@@ -83,13 +83,18 @@ export default function Hero({ onGetCourse }) {
           Freedom Engine fixes that — with structure, not complexity.
         </p>
 
-        <div className="fade-up" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+        <div className="fade-up" style={{
+          display: 'flex', gap: '16px',
+          flexDirection: 'column',
+          alignItems: 'stretch',
+          maxWidth: '420px'
+        }}>
           <button className="btn-primary" onClick={onGetCourse}
-            style={{ fontSize: '16px', padding: '18px 40px' }}>
+            style={{ fontSize: '16px', padding: '18px 24px', width: '100%', textAlign: 'center' }}>
             Start with The Digital Clean-Up — $30
           </button>
           <a href="#app" className="btn-ghost"
-            style={{ fontSize: '16px', padding: '18px 40px' }}>
+            style={{ fontSize: '16px', padding: '18px 24px', width: '100%', textAlign: 'center', boxSizing: 'border-box' }}>
             See Digital Guardian
           </a>
         </div>
