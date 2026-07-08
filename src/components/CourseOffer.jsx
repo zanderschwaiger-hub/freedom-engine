@@ -69,8 +69,8 @@ export default function CourseOffer({ onGetCourse }) {
             color: 'var(--dim)', lineHeight: 1.75,
             marginBottom: '36px', maxWidth: '420px'
           }}>
-            One day. Five fixes. Walk away with the foundation done
-            and the majority of your exposure permanently closed.
+            One day. Five fixes. Walk away knowing exactly what exists in your name,
+            what's been cleaned up, and what to do if something ever goes wrong.
           </p>
 
           <button className="btn-primary fade-up" onClick={onGetCourse}
