@@ -94,7 +94,7 @@ export default function AppBreakdown() {
           </p>
 
           <a
-            href="https://buy.stripe.com/6oU3cx0JdeM8aAz0DFb7y03"
+            href="https://app.freedomengine.ca"
             target="_blank"
             rel="noreferrer"
             className="btn-primary fade-up"
