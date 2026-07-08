@@ -43,7 +43,7 @@ export default function Footer({ onGetCourse }) {
               Get The Digital Clean-Up — $30
             </button>
             
-       <a       href="https://buy.stripe.com/6oU3cx0JdeM8aAz0DFb7y03"
+       <a       href="https://app.freedomengine.ca"
               target="_blank"
               rel="noreferrer"
               className="btn-ghost"
