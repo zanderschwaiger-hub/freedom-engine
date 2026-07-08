@@ -78,9 +78,9 @@ export default function Hero({ onGetCourse }) {
           color: 'var(--dim)', maxWidth: '520px',
           lineHeight: 1.75, marginBottom: '48px'
         }}>
-          Most people have no idea what accounts exist in their name,
-          what has been breached, or what to do when something goes wrong.
-          Freedom Engine fixes that — with structure, not complexity.
+          Creators, influencers, and business owners are the most exposed online — and the least protected.
+          Freedom Engine shows you exactly what accounts exist in your name, what's been breached, and what to do about it.
+          Real solutions to invisible problems — so you can focus on building, not worrying about losing everything you've built.
         </p>
 
         <div className="fade-up" style={{
