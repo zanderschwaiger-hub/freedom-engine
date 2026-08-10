@@ -11,9 +11,4 @@ export default function Mission() {
       </div>
     </section>
   )
-}          Digital safety through technical discipline.
-        </p>
-      </div>
-    </section>
-  )
 }
