@@ -5,6 +5,7 @@ import App from './App.jsx'
 import ThankYou from './pages/ThankYou.jsx'
 import Privacy from './pages/Privacy.jsx'
 import Terms from './pages/Terms.jsx'
+import Business from './pages/Business.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/business" element={<Business />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
