@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Nav from './components/Nav'
-import Hero from './components/Hero'
+import EntryDoors from './components/EntryDoors'
+import Mission from './components/Mission'
 import Problem from './components/Problem'
 import CourseOffer from './components/CourseOffer'
 import Trust from './components/Trust'
@@ -21,7 +22,8 @@ export default function App() {
       <Nav onGetCourse={openCheckout} />
 
       <main>
-        <Hero onGetCourse={openCheckout} />
+        <EntryDoors />
+        <Mission />
         <Problem />
         <CourseOffer onGetCourse={openCheckout} />
         <Trust />
