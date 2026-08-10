@@ -114,9 +114,9 @@ export default function Business() {
                 <button className="btn-primary" onClick={submit} disabled={status === 'sending'} style={{ fontSize: '15px', padding: '16px 32px', width: '100%', opacity: status === 'sending' ? 0.6 : 1 }}>{status === 'sending' ? 'Sending...' : 'Request business program info'}</button>
               </>
             )}
-        </div>
-        <p style={{ fontSize: '11px', fontWeight: 300, color: 'rgba(15,23,42,0.45)', lineHeight: 1.6, marginTop: '28px', textAlign: 'center' }}>Freedom Engine is a private, independently reviewable program. This credential confirms completion of the Freedom Engine assessment. It is not ISO certification, insurer approval, legal-compliance certification, or a guarantee of insurance coverage. Insurance eligibility and coverage are determined solely by the applicable insurer.</p>
-      </section>
+          </div>
+          <p style={{ fontSize: '11px', fontWeight: 300, color: 'rgba(15,23,42,0.45)', lineHeight: 1.6, marginTop: '28px', textAlign: 'center' }}>Freedom Engine is a private, independently reviewable program. This credential confirms completion of the Freedom Engine assessment. It is not ISO certification, insurer approval, legal-compliance certification, or a guarantee of insurance coverage. Insurance eligibility and coverage are determined solely by the applicable insurer.</p>
+        </section>
       )}
     </div>
   )
